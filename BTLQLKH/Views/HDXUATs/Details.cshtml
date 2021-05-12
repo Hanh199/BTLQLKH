@@ -1,0 +1,75 @@
+﻿@model BTLQLKH.Models.HDXUAT
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HDXUAT</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenHDX)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenHDX)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenMH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenMH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Soluongxuat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soluongxuat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Giaban)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Giaban)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ngayxuat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngayxuat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nhanvienxuat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nhanvienxuat)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaHDX }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
