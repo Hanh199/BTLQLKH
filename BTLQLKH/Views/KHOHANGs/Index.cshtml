@@ -5,13 +5,16 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Thông tin kho hàng</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaKho)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.Tenkho)
         </th>
@@ -28,25 +31,28 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Tenkho)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SDT)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Diachi)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Thukho)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaKho }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaKho }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaKho })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.MaKho)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Tenkho)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SDT)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Diachi)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Thukho)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.MaKho }) |
+        @Html.ActionLink("Details", "Details", new { id = item.MaKho }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.MaKho })
+    </td>
+</tr>
 }
 
 </table>

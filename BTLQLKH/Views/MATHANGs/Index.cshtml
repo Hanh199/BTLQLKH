@@ -5,13 +5,16 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Chi tiết mặt hàng</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaMH)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.KHOHANGs.Tenkho)
         </th>
@@ -37,34 +40,37 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.KHOHANGs.Tenkho)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TenMH)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SLton)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DVT)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Gianhap)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MaNCC)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Ghichu)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaMH }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaMH }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaMH })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.MaMH)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.KHOHANGs.Tenkho)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TenMH)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SLton)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DVT)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Gianhap)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MaNCC)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Ghichu)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.MaMH }) |
+        @Html.ActionLink("Details", "Details", new { id = item.MaMH }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.MaMH })
+    </td>
+</tr>
 }
 
 </table>
